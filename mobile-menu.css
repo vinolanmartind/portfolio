@@ -1,4 +1,4 @@
-/* HAMBURGER BUTTON — hidden on desktop */
+
 .hamburger{
     display:none;
     flex-direction:column;
@@ -25,7 +25,6 @@
     background:#fff;
 }
 
-/* animate to an X when the menu is open */
 .hamburger.active span:nth-child(1){
     transform:translateY(8px) rotate(45deg);
 }
@@ -36,7 +35,7 @@
     transform:translateY(-8px) rotate(-45deg);
 }
 
-/* dark overlay behind the sidebar */
+
 .nav-overlay{
     position:fixed;
     inset:0;
