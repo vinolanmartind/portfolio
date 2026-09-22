@@ -13,6 +13,13 @@
     return document.body.classList.contains('dark-mode');
   }
 
+  // light-mode particle color follows the selected accent; exposed so the
+  // color-dot picker below can update it live
+  let accentRGB = '63,69,77';
+  window.setSiteAccentRGB = function(rgb){
+    accentRGB = rgb;
+  };
+
   let pts = [];
   const N = 70;
   for(let i=0;i<N;i++){
@@ -39,8 +46,8 @@
   function step(){
     // background + dot/line colors flip with theme
     const bg = isDark() ? 'rgba(17,17,17,0.28)' : 'rgba(247,247,247,0.35)';
-    const line = isDark() ? '120,170,255' : '0,119,255';
-    const dot  = isDark() ? '160,200,255' : '0,119,255';
+    const line = isDark() ? '180,185,195' : accentRGB;
+    const dot  = isDark() ? '200,205,212' : accentRGB;
 
     ctx.fillStyle = bg;
     ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -215,3 +222,41 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+// COLOR THEME PICKER (5 dots: gray, blue, brown, red, gold)
+// Always starts on gray each visit - no saved preference.
+
+const accentPalette = {
+    gray:  { accent: '#3f454d', soft: '#6b7280', rgb: '63,69,77'   },
+    blue:  { accent: '#2563eb', soft: '#60a5fa', rgb: '37,99,235'  },
+    brown: { accent: '#8b5e34', soft: '#c98a4b', rgb: '139,94,52'  },
+    red:   { accent: '#dc2626', soft: '#f87171', rgb: '220,38,38'  },
+    gold:  { accent: '#d4af37', soft: '#e9c46a', rgb: '212,175,55' }
+};
+
+function applyAccentColor(name){
+
+    const theme = accentPalette[name];
+
+    if(!theme) return;
+
+    document.documentElement.style.setProperty('--accent', theme.accent);
+    document.documentElement.style.setProperty('--accent-soft', theme.soft);
+
+    // keep the background wallpaper particles in sync with the chosen color
+    if(window.setSiteAccentRGB){
+        window.setSiteAccentRGB(theme.rgb);
+    }
+
+    // highlight the matching dot in both the header row and the mobile sidebar row
+    document.querySelectorAll('.dot').forEach((dot) => {
+        dot.classList.toggle('selected', dot.dataset.color === name);
+    });
+}
+
+document.querySelectorAll('.dot').forEach((dot) => {
+    dot.addEventListener('click', () => {
+        applyAccentColor(dot.dataset.color);
+    });
+});

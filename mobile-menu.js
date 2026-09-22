@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   overlay.addEventListener('click', closeMenu);
 
-  // close the sidebar automatically when a nav link is tapped
+ 
   navLinks.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', closeMenu);
   });
 
-  // close if window is resized back to desktop size
+
   window.addEventListener('resize', function () {
     if (window.innerWidth > 768) closeMenu();
   });

@@ -1,4 +1,12 @@
 
+.mobile-resume{
+    display:none;
+}
+
+.mobile-color-dots{
+    display:none;
+}
+
 .hamburger{
     display:none;
     flex-direction:column;
@@ -33,6 +41,27 @@
 }
 .hamburger.active span:nth-child(3){
     transform:translateY(-8px) rotate(-45deg);
+}
+
+.contact-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+}
+
+.contact-links img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 
@@ -79,7 +108,7 @@
     .nav-links{
         position:fixed;
         top:0;
-        right:-280px;
+        left:-280px;
         width:260px;
         height:100vh;
         margin:0;
@@ -89,13 +118,53 @@
         justify-content:flex-start;
         gap:28px;
         padding:100px 35px;
-        box-shadow:-8px 0 30px rgba(0,0,0,0.15);
-        transition:right 0.4s ease;
+        box-shadow:8px 0 30px rgba(0,0,0,0.15);
+        transition:left 0.4s ease;
         z-index:1050;
     }
 
     .nav-links.active{
-        right:0;
+        left:0;
+    }
+
+    /* Color picker: desktop cluster hidden, sidebar row shown instead */
+    .color-dots-desktop{
+        display:none;
+    }
+
+    .mobile-color-dots{
+        display:flex;
+        margin-top:4px;
+    }
+
+    .mobile-color-dots .color-dots{
+        gap:14px;
+    }
+
+    .mobile-color-dots .dot{
+        width:24px;
+        height:24px;
+    }
+
+    /* Resume lives inside the sidebar on mobile, not in the header */
+    .resume-btn{
+        display:none;
+    }
+
+    .mobile-resume{
+        display:block;
+        margin-top:10px;
+    }
+
+    .mobile-resume a{
+        display:inline-block;
+        background:var(--accent);
+        color:white;
+        padding:10px 22px;
+        border-radius:8px;
+        text-decoration:none;
+        font-weight:600;
+        font-size:15px;
     }
 
     .nav-links a{

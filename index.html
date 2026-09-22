@@ -22,12 +22,22 @@
 
     <nav>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home">🏠︎ Home</a></li>
+        <li><a href="#about">🗣 About</a></li>
+        <li><a href="#skills">⚙ Skills</a></li>
+        <li><a href="#experience">▣  Experience</a></li>
+        <li><a href="#projects">▤  Projects</a></li>
+        <li><a href="#contact">✉  Contact</a></li>
+        <li class="mobile-color-dots color-dots">
+          <button class="dot selected" data-color="gray" style="background:#3f454d" aria-label="Gray theme"></button>
+          <button class="dot" data-color="blue" style="background:#2563eb" aria-label="Blue theme"></button>
+          <button class="dot" data-color="brown" style="background:#8b5e34" aria-label="Brown theme"></button>
+          <button class="dot" data-color="red" style="background:#dc2626" aria-label="Red theme"></button>
+          <button class="dot" data-color="gold" style="background:#d4af37" aria-label="Gold theme"></button>
+        </li>
+        <li class="mobile-resume">
+          <a href="img/Vinolan_Martin_Resume.pdf" download>📄 Resume</a>
+        </li>
       </ul>
     </nav>
 
@@ -36,11 +46,19 @@
       <span></span><span></span><span></span>
     </button>
 
+    <div class="color-dots color-dots-desktop" id="color-dots-header">
+      <button class="dot selected" data-color="gray" style="background:#3f454d" aria-label="Gray theme"></button>
+      <button class="dot" data-color="blue" style="background:#2563eb" aria-label="Blue theme"></button>
+      <button class="dot" data-color="brown" style="background:#8b5e34" aria-label="Brown theme"></button>
+      <button class="dot" data-color="red" style="background:#dc2626" aria-label="Red theme"></button>
+      <button class="dot" data-color="gold" style="background:#d4af37" aria-label="Gold theme"></button>
+    </div>
+
+    <button id="theme-toggle">🌙</button>
+
     <a href="img/Vinolan_Martin_Resume.pdf" class="resume-btn" download>
       Resume
     </a>
-    
-    <button id="theme-toggle">🌙</button>
   </header>
 
   <div class="nav-overlay" id="nav-overlay"></div>
@@ -87,34 +105,43 @@
     <div class="about-container">
 
       <div class="about-card hidden">
-        <h3>Education</h3>
+        <h3> Education</h3>
 
         <div class="edu-box">
-          <h4>MCA - Computer Applications</h4>
-          <p>SRM Institute of Science and Technology</p>
-          <span>2026 - 2028</span>
-          <span>currently pursuing.</span>
+          <img class="edu-logo" src="img/srm.png" alt="SRM Institute of Science and Technology logo">
+          <div class="edu-details">
+            <h4>MCA - Computer Applications</h4>
+            <p>SRM Institute of Science and Technology</p>
+            <span>2026 - 2028</span>
+            <span>currently pursuing.</span>
+          </div>
         </div>
         <div class="edu-box">
           </div>
 
         <div class="edu-box">
-          <h4>BCA - Computer Applications</h4>
-          <p>Patrician College of Arts & Science</p>
-          <span>2022 - 2025</span>
+          <img class="edu-logo" src="img/patrician.png" alt="Patrician College of Arts & Science logo">
+          <div class="edu-details">
+            <h4>BCA - Computer Applications</h4>
+            <p>Patrician College of Arts & Science</p>
+            <span>2022 - 2025</span>
+          </div>
         </div>
 
         <div class="edu-box">
-          <h4>Higher Secondary</h4>
-          <p>St. Anne's Matriculation Hr. Sec School</p>
-          <span>2022</span>
+          <img class="edu-logo" src="img/stanns.png" alt="St. Anne's Matriculation Hr. Sec School logo">
+          <div class="edu-details">
+            <h4>Higher Secondary</h4>
+            <p>St. Anne's Matriculation Hr. Sec School</p>
+            <span>2022</span>
+          </div>
         </div>
 
       </div>
 
       <div class="about-text">
 
-        <p>Hi , I'm Vinolan Martin form Chennai.</p>
+        <p> Hi , I'm Vinolan Martin form Chennai.</p>
         <p>I completed my Bachelor of Computer Applications (BCA), where I built a strong foundation in programming, 
           software development, and problem-solving. Throughout my academic journey, 
           I gained knowledge in application development and learned how to build complete end-to-end software solutions.<br>
@@ -136,23 +163,23 @@
   
   <section class="skills section hidden" id="skills">
 
-    <h2 class="section-title">Skills</h2>
+    <h2 class="section-title"> Skills</h2>
 
     <div class="skills-grid">
 
 
-      <div class="skill-card hidden">Python</div>
-      <div class="skill-card hidden">Django</div>
-      <div class="skill-card hidden">Flask</div>
-      <div class="skill-card hidden">Asp.NET</div>
-      <div class="skill-card hidden">C#</div>
-      <div class="skill-card hidden">JavaScript</div>
-      <div class="skill-card hidden">HTML</div>
-      <div class="skill-card hidden">CSS</div>
-      <div class="skill-card hidden">Git & GitHub</div>
-      <div class="skill-card hidden"> SQL </div>
-      <div class="skill-card hidden">bootstrap</div>
-      <div class="skill-card hidden">MySQL</div>
+      <div class="skill-card hidden"><img src="img/python.jfif" alt="Python"><span>Python</span></div>
+      <div class="skill-card hidden"><img src="img/django.jfif" alt="Django"><span>Django</span></div>
+      <div class="skill-card hidden"><img src="img/flask.jfif" alt="Flask"><span>Flask</span></div>
+      <div class="skill-card hidden"><img src="img/aspnet.jfif" alt="Asp.NET"><span>Asp.NET</span></div>
+      <div class="skill-card hidden"><img src="img/csharp.png" alt="C#"><span>C#</span></div>
+      <div class="skill-card hidden"><img src="img/js.png" alt="JavaScript"><span>JavaScript</span></div>
+      <div class="skill-card hidden"><img src="img/html.jfif" alt="HTML"><span>HTML</span></div>
+      <div class="skill-card hidden"><img src="img/cpcl.png" alt="CSS"><span>CSS</span></div>
+      <div class="skill-card hidden"><img src="img/github.png" alt="Git & GitHub"><span>Git & GitHub</span></div>
+      <div class="skill-card hidden"><img src="img/sql.png" alt="SQL"><span>SQL</span></div>
+      <div class="skill-card hidden"><img src="img/bootstrap.png" alt="Bootstrap"><span>bootstrap</span></div>
+      <div class="skill-card hidden"><img src="img/mysql.png" alt="MySQL"><span>MySQL</span></div>
 
     </div>
 
@@ -164,7 +191,7 @@
 <section class="experience section hidden" id="experience">
 
     <h2 class="section-title">
-        Experience
+         Experience
     </h2>
 
     <div class="experience-container">
@@ -173,16 +200,21 @@
 
         <div class="experience-card">
 
-            <h3>
-                Full Stack Developer - Apprentice Trainee
-            </h3>
+            <div class="experience-header">
+              <img class="exp-logo" src="img/cpcl.png" alt="CPCL logo">
+              <div>
+                <h3>
+                    Full Stack Developer - Apprentice Trainee
+                </h3>
 
-            <h4>
-                ASP.NET Technologies
-            </h4>
-            <h4>
-                CPCL - Chennai Petroleum Corporation Limited.
-            </h4>
+                <h4>
+                    ASP.NET Technologies
+                </h4>
+                <h4>
+                    CPCL - Chennai Petroleum Corporation Limited.
+                </h4>
+              </div>
+            </div>
 
             <p>
                 Currently working as a  Full Stack Developer Apprentice
@@ -206,15 +238,20 @@
         <div class="experience-card">
           
 
-            <h3>
-                Full-Stack Web Development Intern
-            </h3>
+            <div class="experience-header">
+              <img class="exp-logo" src="img/8queens.png" alt="8Queens Software Technologies logo">
+              <div>
+                <h3>
+                    Full-Stack Web Development Intern
+                </h3>
 
-            <h4>
-                8Queens Software Technologies<br>
-                10th dec 2024 - 10th Jan 2025
+                <h4>
+                    8Queens Software Technologies<br>
+                    10th dec 2024 - 10th Jan 2025
 
-            </h4>
+                </h4>
+              </div>
+            </div>
 
             <p>
                 Worked on real-world web development projects using
@@ -228,7 +265,7 @@
             </p>
 
             <span>
-                Internship
+                🎓 Internship
             </span>
             <a href="img/vino.intenship.jpg" target="_blank" class="certificate-link" style=" text-decoration: none;">
              <span>View Certificate</span> </a>
@@ -281,7 +318,7 @@
 
         <div class="project-content">
 
-          <h3>2. Calculator</h3>
+          <h3> 2. Calculator</h3>
 
           <p>
             This Calculator is developed using 
@@ -306,7 +343,7 @@
 
         <div class="project-content">
 
-          <h3>3. Employee Management System</h3>
+          <h3> 3. Employee Management System</h3>
 
           <p>
              EMS is developed using 
@@ -335,7 +372,7 @@
 
         <div class="project-content">
 
-          <h3>4. a.Alpha Electric & Electronics (user portal)</h3>
+          <h3> 4. a.Alpha Electric & Electronics (user portal)</h3>
 
           <p>
            Alpha Electric & Electronics is a  e-commerce website developed to provide customers 
@@ -360,7 +397,7 @@
 
         <div class="project-content">
 
-          <h3>4. b.Alpha Electric & Electronics (admin portal)</h3>
+          <h3> 4. b.Alpha Electric & Electronics (admin portal)</h3>
 
           <p>
             For the backend, I used Python with Flask to handle application logic, user requests, and data processing. 
@@ -385,7 +422,7 @@
 
         <div class="project-content">
 
-          <h3>5. Turf Online Booking System.</h3>
+          <h3> 5. Turf Online Booking System.</h3>
           <h4> MY ACADEMIC PROJECT</h4> <p>group members: Vinolan martin, Sivinas, Sanjaykana</p>
 
           <p>
@@ -429,9 +466,28 @@
   <section class="contact section hidden" id="contact">
     <h1>Contact</h1>
     <div class="contact-info">
-      <p><span>📩 Email:</span>vinolanmartindp@gmail.com</p>
-      <p><span>📞 Phone:</span>+91 75501 41906</p>
-      <p><span>💼 LinkedIn:</span><a href="https://www.linkedin.com/in/vinolan-martin-d-b504a3327/" target="_blank" rel="noopener">Vinolan Martin</a></p>
+      <div class="contact-links">
+
+    
+    <a href="mailto:vinolanmartindp@gmail.com">
+        <img src="img/mail.png" alt="Email">
+        vinolanmartindp@gmail.com
+    </a> <br/>
+
+  
+    <a href="tel:+917550141906">
+        <img src="img/phone.jfif" alt="Phone">
+        +91 75501 41906
+    </a> <br/>
+
+    
+    <a href="https://www.linkedin.com/in/vinolan-martin-d-b504a3327/"
+       target="_blank" rel="noopener">
+        <img src="img/linkedin.png" alt="LinkedIn">
+        Vinolan Martin
+    </a> <br/>
+
+</div>
       <p><span>📍 Location:</span>Chennai, Tamil Nadu</p>
     </div>
     <p class="copyright">@ 2025 Vinolan Martin.</p>
@@ -440,7 +496,7 @@
 
 
   <script src="script.js"></script>
-  <script src="mobile-menu.js"></script>
+  <script src="mobile-menu.js"></script> 
 
 </body>
-</html
+</html>
